@@ -1,0 +1,14 @@
+﻿@model AshburtonCocWebsite.Models.Media
+
+@{
+    ViewData["Title"] = "Listen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <audio controls style="width:100%;max-width:600px;">
+        <source src="@Model.AudioPath" type="audio/mp4"/>
+    </audio>
+</div>

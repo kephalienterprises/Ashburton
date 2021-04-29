@@ -1,0 +1,4 @@
+﻿display general church info on home page
+allow admin to upload files to media (images, pdfs, audio)
+figure out how to allow the azure server to make outbound http requests (for the icons)
+allow super user to grant admin privileges within site

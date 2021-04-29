@@ -1,0 +1,118 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
+@model IEnumerable<AshburtonCocWebsite.Models.Media>
+
+@{
+    ViewData["Title"] = "Media";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdminRole")).Succeeded)
+{
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+}
+
+<div class="table-responsive">
+    <table id="tblMedia" class="display compact">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SpeakerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tags)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Scriptures)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Service)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Activity)
+                </th>
+                <th>
+                    Links
+                </th>
+                @if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdminRole")).Succeeded)
+                {
+                <th>Admin</th>
+                }
+            </tr>
+        </thead>
+        <tbody id="tblMediaBody">
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpeakerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tags)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Scriptures)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Service)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Activity)
+                </td>
+                <td>
+                    @if (@item.VideoPath != null && @item.VideoPath.Length > 0)
+                    {
+                    <a asp-action="Watch" asp-route-id="@item.Id"><i class="fa fa-film"></i></a>
+                    }
+                    @if (@item.AudioPath != null && @item.AudioPath.Length > 0)
+                    {
+                    <a asp-action="Listen" asp-route-id="@item.Id"><i class="fas fa-headphones-alt"></i></a>
+                    }
+                </td>
+                @if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdminRole")).Succeeded)
+                {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                }
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@section Scripts {
+    <link rel="stylesheet" href="~/lib/datatables/DataTables-1.10.24/css/jquery.dataTables.min.css" />
+    <script type="text/javascript" src="~/lib/datatables/DataTables-1.10.24/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var table = $('#tblMedia').DataTable();
+            table
+                .order([4, 'desc'], [5, 'desc'], [6, 'desc'], [1, 'asc'])
+                .draw();
+        });
+    </script>
+}
+
+

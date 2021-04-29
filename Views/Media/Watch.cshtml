@@ -1,0 +1,30 @@
+﻿@model AshburtonCocWebsite.Models.Media
+
+@{
+    ViewData["Title"] = "Watch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if(Model.VideoPath.Contains("youtube-nocookie.com"))
+{
+<iframe width="560" height="315"
+        src="@Model.VideoPath"
+        title="Youtube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+}
+else if(Model.VideoPath.Contains("facebook.com"))
+{
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+<div class="fb-video" data-href="@Model.VideoPath"
+     data-allowfullscreen="true" data-width="500" data-height="281"></div>
+}
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

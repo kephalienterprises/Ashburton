@@ -1,0 +1,214 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+@font-face {
+    font-family: "poppins";
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+.navbar-nav li {
+    padding-right: 20px;
+}
+
+.nav-link {
+    font-size: 1.1em !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.btn-primary:hover {
+    background-color: #60b0f4;
+    border: #5f64f4;
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+body {
+  /* Margin bottom by footer height */
+/*  margin-bottom: 60px;
+*/}
+
+html, body {
+    font-family: poppins;
+    color: #222;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 1.6; /* Vertically center the text there */
+}
+
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+}
+
+.carousel-caption h1 {
+    font-size: 500%;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 10px #000;
+}
+
+.carousel-caption h3 {
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 4px 4px 10px #000;
+    padding-bottom: 1rem;
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    #slides .carousel-inner img {
+        height: 300px;
+    }
+
+    html, h1 {
+        font-size: 0.5rem;
+    }
+
+    html, h3 {
+        font-size: 0.5rem;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #slides .carousel-inner img {
+        height: 300px;
+    }
+
+    html, h1 {
+        font-size: 0.5rem;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #slides .carousel-inner img {
+        height: 300px;
+    }
+
+    html, h1 {
+        font-size: 0.5rem;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #slides .carousel-inner img {
+        height: 300px;
+    }
+
+    html, h1 {
+        font-size: 0.5rem;
+    }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    #slides .carousel-inner img {
+        height: 500px;
+    }
+}
+
+[class*="col-"] {
+    padding: 1rem;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-youtube {
+    color: #FF0000;
+}
+
+.fa-facebook, .fa-youtube {
+    font-size: 4.5em;
+    padding: 3rem;    
+}
+
+.fa-facebook:hover, .fa-youtube:hover {
+    color: #60b0f4;
+}
+
+
+
+footer {
+    background-color: #3f3f3f;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+
+hr.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+hr.light-100 {
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    display: block;
+    position: absolute;
+    top: -60px;
+    right: 0;
+    color: #60b0f4;
+}

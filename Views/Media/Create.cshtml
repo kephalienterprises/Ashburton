@@ -1,0 +1,139 @@
+﻿@model AshburtonCocWebsite.Models.Media
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Media</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="table table-borderless">
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="SpeakerName" class="control-label"></label>
+                            <input asp-for="SpeakerName" class="form-control" />
+                            <span asp-validation-for="SpeakerName" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Title" class="control-label"></label>
+                            <input asp-for="Title" class="form-control" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Tags" class="control-label"></label>
+                            <input asp-for="Tags" class="form-control" />
+                            <span asp-validation-for="Tags" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Scriptures" class="control-label"></label>
+                            <input asp-for="Scriptures" class="form-control" />
+                            <span asp-validation-for="Scriptures" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Date" class="control-label"></label>
+                            <input asp-for="Date" class="form-control" />
+                            <span asp-validation-for="Date" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Service" class="control-label"></label>
+                            <select asp-for="Service" class="form-select form-control">
+                                <option value="Sunday AM">Sunday AM</option>
+                                <option value="Sunday PM">Sunday PM</option>
+                                <option value="Wednesday PM">Wednesday PM</option>
+                            </select>
+                            <span asp-validation-for="Service" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Activity" class="control-label"></label>
+                            <select asp-for="Activity" class="form-select form-control">
+                                <option value="Sermon">Sermon</option>
+                                <option value="Class">Class</option>
+                                <option value="Singing">Singing</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Activity" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="VideoPath" class="control-label"></label>
+                            <input asp-for="VideoPath" class="form-control" />
+                            <span asp-validation-for="VideoPath" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="AudioPath" class="control-label"></label>
+                            <input asp-for="AudioPath" class="form-control" />
+                            <span asp-validation-for="AudioPath" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="MaterialsPath" class="control-label"></label>
+                            <input asp-for="MaterialsPath" class="form-control" />
+                            <span asp-validation-for="MaterialsPath" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="ImagePath" class="control-label"></label>
+                            <input asp-for="ImagePath" class="form-control" />
+                            <span asp-validation-for="ImagePath" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

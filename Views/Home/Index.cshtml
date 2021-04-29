@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="slides" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner align-items-center">
+        <div class="carousel-item active">
+            <img src="~/media/images/boaz.jpg" class="d-block" alt="...">
+            <div class="carousel-caption">
+                <h1>Boaz: A Worthy Man</h1>
+                <h3>Learning from Boaz's example in the book of Ruth</h3>
+                <a class="btn btn-primary btn-lg" href="https://ashburtonchurch.com/Media/Watch/13">Watch</a>
+            </div>        
+        </div>
+        <div class="carousel-item">
+            <img src="~/media/images/PaulPreachingRaphael.jpg" class="d-block" alt="...">
+            <div class="carousel-caption">
+                <h1>Paul Among the "Agnostics"</h1>
+                <h3>Learning from Paul's sermon to the Athenians</h3>
+                <a class="btn btn-primary btn-lg" href="https://ashburtonchurch.com/Media/Watch/9">Watch</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/media/images/paulsmissionaryjourneys.png" class="d-block" alt="...">
+            <div class="carousel-caption">
+                <h1>Paul's First Missionary Journey</h1>
+                <h3>A study of Acts 13</h3>
+                <a class="btn btn-primary btn-lg" href="https://ashburtonchurch.com/Media/Watch/14">Watch</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#slides" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slides" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- About -->
+@*<div class="container-fluid">
+    <div class="row bg-light">
+        <div class="col-lg-6">
+            <h2>Welcome to the Ashburton Drive Church of Christ</h2>
+            <p>
+                We are a group of Christians that meets in Montgomery, AL and strives to follow God's plan for His church.
+            </p>
+            <br />
+            <a class="btn btn-primary" asp-controller="Home" asp-action="About">Learn More</a>
+        </div>
+        <div class="col-lg-6">
+            <img src="~/media/images/ashburtonbuilding.jpg" class="img-fluid" />
+        </div>
+    </div>    
+</div>*@
+
+<div class="container-fluid">
+    <div class="row bg-light my-3">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead">
+                Welcome to the Ashburton Drive Church of Christ. We are a group of Christians that meets in Montgomery, AL and strives to follow God's plan for His church.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a class="btn btn-primary" asp-controller="Home" asp-action="About">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Connect -->
+<div class="container-fluid pb-3">
+    <div class="row text-center pb-3">
+        <div class="col-12">
+            <h2>Connect</h2>
+        </div>
+        <div class="col-12 social pb-3">
+            <a href="https://www.facebook.com/AshburtonDriveChurchofChrist" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UCFQiCUdMrSStmCKg6dou_uw" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
