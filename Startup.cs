@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AshburtonCocWebsite.Areas.Identity.Data;
 
 namespace AshburtonCocWebsite
 {
@@ -37,7 +38,7 @@ namespace AshburtonCocWebsite
 #endif
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<IdentityRole>()                
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();

@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using AshburtonCocWebsite.Models;
+using AshburtonCocWebsite.Areas.Identity.Data;
 
 namespace AshburtonCocWebsite.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
