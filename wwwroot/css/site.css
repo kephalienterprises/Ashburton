@@ -26,6 +26,22 @@ a.navbar-brand {
     border-color: #1861ac;
 }
 
+.navbar .nav-item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.dropdown-toggle::after {
+    transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+}
+
+.dropdown-menu {
+    margin-top: 0;
+}
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
@@ -113,9 +129,9 @@ html, body {
         height: 300px;
     }
 
-    html, h1 {
+    /*html, .carousel-caption h1 {
         font-size: 0.5rem;
-    }
+    }*/
 
     html, h3 {
         font-size: 0.5rem;
@@ -128,9 +144,9 @@ html, body {
         height: 300px;
     }
 
-    html, h1 {
+    /*html, .carousel-caption h1 {
         font-size: 0.5rem;
-    }
+    }*/
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -139,9 +155,9 @@ html, body {
         height: 300px;
     }
 
-    html, h1 {
+    /*html, .carousel-caption h1 {
         font-size: 0.5rem;
-    }
+    }*/
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -150,9 +166,9 @@ html, body {
         height: 300px;
     }
 
-    html, h1 {
+    /*html, .carousel-caption h1 {
         font-size: 0.5rem;
-    }
+    }*/
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
@@ -184,9 +200,17 @@ html, body {
     color: #60b0f4;
 }
 
+blockquote.blockquote {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 1rem;
+}
 
 
-footer {
+#pageFooter {
     background-color: #3f3f3f;
     color: #d5d5d5;
     padding-top: 2rem;

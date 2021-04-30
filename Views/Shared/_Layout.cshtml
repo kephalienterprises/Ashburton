@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="icon" href="~/media/images/cross2.png" />
 </head>
-<body>    
+<body>
     <header>
         <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
             <div class="container-fluid">
@@ -27,8 +27,23 @@
                 <div class="navbar-collapse collapse" id="navbarResponsive">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>
+                        @*<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               asp-controller="Home" asp-action="Index"
+                               role="button" data-bs-toggle="dropdown">Home</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-controller="Home" asp-action="About">About</a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="Contact">Contact</a>
+                            </div>
+                        </li>*@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Media" asp-action="Index">Media</a>
                         </li>
@@ -59,7 +74,7 @@
         </main>
     </div>
 
-    <footer>
+    <footer id="pageFooter">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4">
@@ -71,7 +86,7 @@
                     <p><i class="fas fa-phone"></i> 813-363-4092</p>
                     <div class="row">
                         <p><i class="fas fa-envelope"></i> ashburtoncoc@outlook.com</p>
-                    </div>                    
+                    </div>
                     <p><i class="fas fa-map-marker-alt"></i> 70 Ashburton Drive Montgomery, AL 36117</p>
                 </div>
                 <div class="col-md-4">
@@ -86,11 +101,11 @@
                 </div>
                 <div class="col-md-4">
                     <hr class="light" />
-                    <h5>Colossians 3:17</h5>   
+                    <h5>Colossians 3:17</h5>
                     <hr class="light" />
                     <blockquote>
                         Whatever you do in word or deed, do everything in the name of the Lord Jesus, giving thanks through Him to God the Father.
-                    </blockquote>                  
+                    </blockquote>
                 </div>
                 <div class="col-12">
                     <hr class="light-100" />
@@ -101,5 +116,32 @@
     </footer>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script type="text/javascript">
+        const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
+
+        $(window).on("load resize", function () {
+            if (this.matchMedia("(min-width: 768px)").matches) {
+                $dropdown.hover(
+                    function () {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "true");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    },
+                    function () {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
+                    }
+                );
+            } else {
+                $dropdown.off("mouseenter mouseleave");
+            }
+        });
+    </script>
 </body>
 </html>

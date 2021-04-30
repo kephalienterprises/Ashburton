@@ -23,7 +23,7 @@ else if(Model.VideoPath.Contains("facebook.com"))
     <div class="fb-xfbml-parse-ignore">
         <blockquote cite="@Model.VideoPath">
             <a href="@Model.VideoPath">@Model.Title</a>
-            <p>Title</p>
+            <p>@Model.SpeakerName</p>
             Recorded on @Model.Date.ToShortDateString()
         </blockquote>
     </div>
