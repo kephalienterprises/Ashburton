@@ -16,7 +16,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AshburtonCocWebsite.Areas.Identity.Pages.Account
 {
-    [Authorize(Roles = "Admin")]
+    [AllowAnonymous]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;

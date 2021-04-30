@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AshburtonCocWebsite.Data;
 using AshburtonCocWebsite.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AshburtonCocWebsite.Controllers
 {
+    [Authorize(Roles = "Member, Admin")]
     public class MembersController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -17,6 +19,7 @@ namespace AshburtonCocWebsite.Controllers
         public MembersController(ApplicationDbContext context)
         {
             _context = context;
+            
         }
 
         // GET: Members

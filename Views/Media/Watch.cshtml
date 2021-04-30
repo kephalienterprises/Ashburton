@@ -5,10 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@Model.Title</h1>
-<h3>@Model.SpeakerName</h3>
-<h3>@Model.Date.ToShortDateString()</h3>
-
 @if(Model.VideoPath.Contains("youtube-nocookie.com"))
 {
 <div class="embed-responsive embed-responsive-16by9">
@@ -17,11 +13,32 @@
 }
 else if(Model.VideoPath.Contains("facebook.com"))
 {
+<!-- Load Facebook SDK for JavaScript-->
 <div id="fb-root"></div>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-<div class="fb-video" data-href="@Model.VideoPath"
-     data-allowfullscreen="true" data-width="500" data-height="281"></div>
+<div class="fb-video" 
+     data-href="@Model.VideoPath"
+     data-allowfullscreen="true" 
+     data-show-text="false">
+    <div class="fb-xfbml-parse-ignore">
+        <blockquote cite="@Model.VideoPath">
+            <a href="@Model.VideoPath">@Model.Title</a>
+            <p>Title</p>
+            Recorded on @Model.Date.ToShortDateString()
+        </blockquote>
+    </div>
+</div>
 }
+
+<div class="container-fluid">
+    <div class="row bg-light my-3">
+        <p class="lead">
+            @Model.Title
+        </p>
+        <p>@Model.SpeakerName</p>
+        <p>@Model.Date.ToShortDateString()</p>
+    </div>
+</div>
 
 <div>
     <a asp-action="Index">Back to List</a>

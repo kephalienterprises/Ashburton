@@ -13,8 +13,8 @@ namespace AshburtonCocWebsite.Data
             : base(options)
         {
         }
-        public DbSet<AshburtonCocWebsite.Models.Media> Media { get; set; }
-        public DbSet<AshburtonCocWebsite.Models.Article> Articles { get; set; }
-        public DbSet<AshburtonCocWebsite.Models.PrayerRequest> PrayerRequests { get; set; }
+        public DbSet<Media> Media { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<PrayerRequest> PrayerRequests { get; set; }
     }
 }

@@ -175,8 +175,9 @@ html, body {
 }
 
 .fa-facebook, .fa-youtube {
-    font-size: 4.5em;
-    padding: 3rem;    
+    font-size: 2em;
+    padding-bottom: 1em;
+    padding-right: .5em;
 }
 
 .fa-facebook:hover, .fa-youtube:hover {
@@ -203,12 +204,4 @@ hr.light-100 {
     width: 100%;
     margin-top: .8rem;
     margin-bottom: 1rem;
-}
-
-.tagline {
-    display: block;
-    position: absolute;
-    top: -60px;
-    right: 0;
-    color: #60b0f4;
 }

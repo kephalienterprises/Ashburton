@@ -14,7 +14,7 @@
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
-                <input id="email" asp-for="Input.Email" class="form-control" />
+                <input asp-for="Input.Email" class="form-control" />
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -31,30 +31,6 @@
         </form>
     </div>
 </div>
-
-<script>
-    //function validateEmail() {
-    //    var email = document.getElementById("email");
-    //    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value))
-    //    {
-    //        callMailboxlayerApi(email.value);
-    //    }
-    //} 
-
-    //function callMailboxlayerApi(emailAddress) {
-    //    var Http = new XMLHttpRequest();
-    //    var url = "http://apilayer.net/api/check"
-    //        + "?access_key=5b46d7eff93d3f496265b4cdee79c5bf"
-    //        + "&email=" + emailAddress
-    //        + "&smtp=1"
-    //        + "&format=1";
-    //    Http.open("GET", url);
-    //    Http.send();
-    //    Http.onreadystatechange = (e) => {
-    //        console.log(Http.responseText);
-    //    }
-    }
-</script>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
