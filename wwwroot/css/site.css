@@ -59,20 +59,21 @@ a {
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
     position: relative;
     min-height: 100%;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -124,13 +125,10 @@ html, body {
         height: 300px;
     }
 
-    /*html, .carousel-caption h1 {
-        font-size: 0.5rem;
-    }*/
-
-    html, h3 {
+    .carousel-caption {
         font-size: 0.5rem;
     }
+    
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -138,10 +136,6 @@ html, body {
     #slides .carousel-inner img {
         height: 300px;
     }
-
-    /*html, .carousel-caption h1 {
-        font-size: 0.5rem;
-    }*/
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -149,10 +143,6 @@ html, body {
     #slides .carousel-inner img {
         height: 300px;
     }
-
-    /*html, .carousel-caption h1 {
-        font-size: 0.5rem;
-    }*/
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -160,10 +150,6 @@ html, body {
     #slides .carousel-inner img {
         height: 300px;
     }
-
-    /*html, .carousel-caption h1 {
-        font-size: 0.5rem;
-    }*/
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
