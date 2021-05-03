@@ -12,13 +12,13 @@
 
 @if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdminRole")).Succeeded)
 {
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
 }
 
 <div class="table-responsive">
-    <table class="table">
+    <table id="tblArticles" class="display compact">
         <thead>
             <tr>
                 <th>
@@ -68,3 +68,16 @@
         </tbody>
     </table>
 </div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/lib/datatables/DataTables-1.10.24/css/jquery.dataTables.min.css" />
+    <script type="text/javascript" src="~/lib/datatables/DataTables-1.10.24/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tblArticles').DataTable({
+                "order": [[0, 'asc']]
+            });
+        });
+    </script>
+}

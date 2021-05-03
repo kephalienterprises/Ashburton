@@ -7,11 +7,15 @@
 
 <h1>@Model.Title</h1>
 <h3>@Model.AuthorName</h3>
+<h5>@Model.Date.ToShortDateString()</h5>
 <br />
 <div>
     <p style="white-space: pre-line">
         @Model.Body
     </p>
+</div>
+<div class="pt-3">
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts{
