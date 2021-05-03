@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts{
+    <script src="http://code.bib.ly/bibly.min.js"></script>
+    <link href="http://code.bib.ly/bibly.min.css" rel="stylesheet" />
+    <script>
+        $(document).ready(function () {
+            // Bible version for all links. Leave blank to let user choose.
+            bibly.linkVersion = 'NET';
+            // Turn off popups
+            bibly.enablePopups = false;
+            // ESV, NET, KJV, or LEB are the currently supported popups.
+            bibly.popupVersion = 'NET';
+            // the ID of a node you want to scan. Leave blank for the entire document.
+            // bibly.startNodeId = 'mycontent';
+            // if you want to manually call bibly.scanForReferences(node);
+            // bibly.autoStart = false;
+            // class name for Bible links
+            bibly.className = 'bibly_reference';
+            // opens verses in a new window/tab
+            bibly.newWindow = true;
+        });
+    </script>
+}

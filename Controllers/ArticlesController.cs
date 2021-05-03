@@ -152,5 +152,22 @@ namespace AshburtonCocWebsite.Controllers
         {
             return _context.Articles.Any(e => e.Id == id);
         }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Read(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var article = await _context.Articles.FindAsync(id);
+            if (article == null)
+            {
+                return NotFound();
+            }
+
+            return View(article);
+        }
     }
 }
