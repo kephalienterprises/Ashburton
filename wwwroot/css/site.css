@@ -103,6 +103,8 @@ html, body {
 .carousel-inner img {
     width: 100%;
     margin: auto;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .carousel-caption h1 {
@@ -115,7 +117,7 @@ html, body {
 .carousel-caption h3 {
     font-size: 200%;
     font-weight: 500;
-    text-shadow: 4px 4px 10px #000;
+    text-shadow: 5px 5px 15px #000;
     padding-bottom: 1rem;
 }
 
@@ -136,6 +138,10 @@ html, body {
     #slides .carousel-inner img {
         height: 300px;
     }
+
+    .carousel-caption {
+        font-size: 0.5rem;
+    }
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -143,12 +149,16 @@ html, body {
     #slides .carousel-inner img {
         height: 300px;
     }
+
+    .carousel-caption {
+        font-size: 0.5rem;
+    }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
     #slides .carousel-inner img {
-        height: 300px;
+        height: 500px;
     }
 }
 
