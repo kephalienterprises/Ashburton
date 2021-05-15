@@ -14,6 +14,7 @@ namespace AshburtonCocWebsite.Models
         public DateTime Date { get; set; }
         public string Requestor { get; set; }
         public string Request { get; set; }
+        public string UserID { get; set; }
 
     }
 }

@@ -32,9 +32,9 @@ namespace AshburtonCocWebsite
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
 #if DEBUG
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("DevConnection")));
 #else
-                    Configuration.GetConnectionString("AzureConnection")));
+                    Configuration.GetConnectionString("ProdConnection")));
 #endif
             services.AddDatabaseDeveloperPageExceptionFilter();
 
