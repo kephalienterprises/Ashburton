@@ -6,8 +6,12 @@
 <div class="modal fade" id="meetingAnnouncement" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content" style="text-align:center">
+            <div class="modal-header">
+                <h5 class="modal-title">A Special Invitation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
             <div class="modal-body" style="text-align:center">
-                <div class="card mb-3" style="width: 100%; height: 100%; text-align: center">
+                <div class="card mb-3" style="width: 100%; height: 100%;">
                     <img class="card-img-top" src="~/media/images/meeting.jpg" alt="Card image cap" />                    
                     <ul class="list-group list-group-flush" style="text-align:left">
                         <li class="list-group-item"><b>Sunday 9AM:</b> Seeing Light in Times of Loneliness</li>
@@ -20,7 +24,8 @@
                         <li class="list-group-item"><b>Friday 7PM:</b> Finding Light and Thankfulness in Times of Darkness</li>
                     </ul>
                     <div class="card-body">
-                        <a class="btn btn-primary" asp-action="DownloadMeetingFlyer" asp-controller="Home">Learn More</a>
+                        <a class="btn btn-secondary" asp-action="DownloadMeetingFlyer" asp-controller="Home">Learn More</a>
+                        <a class="btn btn-primary" href="https://www.facebook.com/events/183124170562352">RSVP</a>
                     </div>
                 </div>
             </div>
