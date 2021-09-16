@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjDdwCafdqECrlOxQvrOmKAAAAAACAAAAAAADZgAAwAAAABAAAACDaU+cLPvH6DWc8Zw1e7RfAAAAAASAAACgAAAAEAAAADUk52BK8IRl0AFLq6yBFu2AAAAAaPs0w5hUn8eEJ2zhKBz4hEQxOXte6u7P4+2HlWyAFrR1OsZdyBmWt08r+qGH1au1wKhZAZ6p9qcxxxGqnn/wEAZ9EBHfRUXwSScxzyc0QyjfEliz2XHD7n1IxBErMpxlp4aobGmkkUOiGKDz2UCek/pyb46+BClxXq6Q7ZjKWGQUAAAAwiSVXRm4YA59JLxISjQZeHAcJ+U=</EncryptedPassword>
-    <History>True|2021-06-12T18:33:08.4147072Z;True|2021-06-12T13:31:23.1395082-05:00;True|2021-06-12T10:32:08.0135200-05:00;True|2021-06-12T10:26:21.3767390-05:00;True|2021-06-12T10:14:13.6251823-05:00;True|2021-06-12T10:08:33.9445003-05:00;True|2021-06-12T10:05:27.5344436-05:00;True|2021-06-12T09:58:22.0565850-05:00;</History>
+    <History>True|2021-09-16T17:37:25.3174885Z;True|2021-06-12T13:33:08.4147072-05:00;True|2021-06-12T13:31:23.1395082-05:00;True|2021-06-12T10:32:08.0135200-05:00;True|2021-06-12T10:26:21.3767390-05:00;True|2021-06-12T10:14:13.6251823-05:00;True|2021-06-12T10:08:33.9445003-05:00;True|2021-06-12T10:05:27.5344436-05:00;True|2021-06-12T09:58:22.0565850-05:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <AzureDBConnectionStrings Include="Data Source=tcp:ashburtoncocwebsitedbserver.database.windows.net,1433;Initial Catalog=AshburtonCocWebsite_db;User Id=ashburton@ashburtoncocwebsitedbserver;Password=Galatians2.20" />
