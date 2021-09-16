@@ -34,6 +34,13 @@ namespace AshburtonCocWebsite.Controllers
             return View();
         }
 
+        public IActionResult DownloadMeetingFlyer()
+        {
+            string filePath = $"{System.IO.Directory.GetCurrentDirectory()}\\wwwroot\\media\\images\\MeetingFlyer.pdf";
+            byte[] bytes = System.IO.File.ReadAllBytes(filePath);
+            return File(bytes, "application/force-download", "Meeting Flyer.pdf");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
