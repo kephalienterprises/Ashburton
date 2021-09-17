@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0Zxgd7aePUy/3Kvv8HW1ZQAAAAACAAAAAAAQZgAAAAEAACAAAAAAXRkv2BLPngbEGSCJTQJyS7XJ0juu5FkFCO8SUt3kkQAAAAAOgAAAAAIAACAAAAASb/BPFWsEABJ6tH3NvWhVV6CHnGh6ELGJg5r9+7GcT4AAAAAe4SNtAfqMtyeMqgsFBL3F6PaTLzNTvkwooCFKEteBD+9TFxO6WNn6TwIOVakX0kF5ZIFzZmNICYPqSf9kvMhAESpJ8raAyOyEVBIzuDUv6zenK8q79FS3fZ6u6z3cdk31ise/LONdez2HaOfY1GKVFgQHeyMDQe8TdL0S3pt+30AAAAC2XkXtbJZd0j7M93aaa7F5+/oZloUXJ0sTuFK95CslqnVd1HCyb3ShxK4ZaPZe4IlgJmlp9zuAM0HO6e79w+Rs</EncryptedPassword>
+    <History>True|2021-05-16T19:31:11.3963848Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=tcp:ashburtoncocwebsitedbserver.database.windows.net,1433;Initial Catalog=AshburtonCocWebsite_db;User Id=ashburton@ashburtoncocwebsitedbserver;Password=Mabeliz2021." />
+    <AzureDBConnectionStrings Include="Data Source=tcp:ashburtoncocwebsitedbserver.database.windows.net,1433;Initial Catalog=dev;User Id=ashburton@ashburtoncocwebsitedbserver;Password=Mabeliz2021." />
+    <AzureDBConnectionStrings Include="Server=(localdb)\\mssqllocaldb;Database=aspnet-AshburtonCocWebsite-0D0B2EA4-68A0-469D-B597-E9D6FDACCBB2;Trusted_Connection=True;MultipleActiveResultSets=true" />
+  </ItemGroup>
+</Project>

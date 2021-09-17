@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "mssql4": {
+      "restored": true,
+      "restoreTime": "2021-05-16T19:30:14.0335457Z"
+    },
+    "mssql3": {
+      "restored": true,
+      "restoreTime": "2021-05-16T19:29:49.9153458Z"
+    }
+  },
+  "parameters": {
+    "mssql3.subscriptionId": {
+      "Name": "mssql3.subscriptionId",
+      "Type": "subscription",
+      "Value": "458becce-bba5-4f6a-badd-b9daa80bf938"
+    },
+    "mssql4.resourceGroupName": {
+      "Name": "mssql4.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Ashburton"
+    },
+    "mssql4.subscriptionId": {
+      "Name": "mssql4.subscriptionId",
+      "Type": "subscription",
+      "Value": "458becce-bba5-4f6a-badd-b9daa80bf938"
+    },
+    "mssql3.resourceGroupName": {
+      "Name": "mssql3.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Ashburton"
+    }
+  }
+}
