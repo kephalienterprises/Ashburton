@@ -103,7 +103,7 @@
                     <h5>Our Meeting Times</h5>
                     <hr class="light" />
                     <p>Sunday AM: 9am - 11am</p>
-                    <p>*Sunday PM: 5pm - 6pm*</p>
+                    <p>Sunday PM: 5pm - 6pm</p>
                     <p>Wednesday: 7pm - 8pm</p>
                 </div>
                 <div class="col-md-4">
@@ -131,8 +131,15 @@
         const $dropdownMenu = $(".dropdown-menu");
         const showClass = "show";
 
+        if (sessionStorage.getItem("bannerShown") != null) {
+            $(document).ready(function () {
+                $('#meetingAnnouncementBanner').hide();
+            });
+        }
+
         $("#meetingAnnouncementClose").click(function () {
             $("#meetingAnnouncementBanner").hide();
+            sessionStorage.setItem("bannerShown", "true");
         });
 
         $(window).on("load resize", function () {
