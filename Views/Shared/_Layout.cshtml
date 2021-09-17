@@ -16,19 +16,24 @@
 </head>
 <body>
     <header>
-        <div class="bg-dark text-light p-1" style="width:100%">
-            <h5>
-                <i class="fas fa-bible"></i>
-                October 17th-22nd
-                <i class="fas fa-bible"></i>
-                <b>John Gibson</b>
-                <i class="fas fa-bible"></i>
-                <i>Living as Lights in a Dark World</i>
-                <a class="btn btn-secondary" asp-action="DownloadMeetingFlyer" asp-controller="Home">Learn More</a>
-                <a class="btn btn-primary" href="https://www.facebook.com/events/183124170562352">RSVP</a>
-            </h5>
-            
+        <!--Announcement banner-->
+        <div id="meetingAnnouncementBanner" class="row bg-dark text-light w-100">
+            <div class="col-9">
+                <h5>
+                    <i class="far fa-calendar"></i>&nbsp;October 17th-22nd&nbsp;
+                    <i class="fas fa-male"></i>&nbsp;John Gibson&nbsp;
+                    <i class="fas fa-bible"></i><i>&nbsp;Living as Lights in a Dark World&nbsp;</i>
+                    <a class="btn btn-secondary ml-2" asp-action="DownloadMeetingFlyer" asp-controller="Home">Learn More</a>
+                    <a class="btn btn-primary" href="https://www.facebook.com/events/183124170562352" target="_blank">RSVP</a>
+                </h5>
+                
+            </div>
+            <div class="col-3 text-end">
+                <button id="meetingAnnouncementClose" type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+            </div>            
         </div>
+
+        <!--Navbar-->
         <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
@@ -45,18 +50,6 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
                         </li>
-                        @*<li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
-                        </li>*@
-                        @*<li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle"
-                               asp-controller="Home" asp-action="Index"
-                               role="button" data-bs-toggle="dropdown">Home</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" asp-controller="Home" asp-action="About">About</a>
-                                <a class="dropdown-item" asp-controller="Home" asp-action="Contact">Contact</a>
-                            </div>
-                        </li>*@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Media" asp-action="Index">Media</a>
                         </li>
@@ -81,12 +74,15 @@
             </div>
         </nav>
     </header>
+
+    <!--Main Content-->
     <div class="container py-3">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
+    <!--Footer-->
     <footer id="pageFooter">
         <div class="container-fluid">
             <div class="row">
@@ -125,6 +121,8 @@
             </div>
         </div>
     </footer>
+
+    <!--Scripts-->
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script type="text/javascript">
@@ -132,6 +130,10 @@
         const $dropdownToggle = $(".dropdown-toggle");
         const $dropdownMenu = $(".dropdown-menu");
         const showClass = "show";
+
+        $("#meetingAnnouncementClose").click(function () {
+            $("#meetingAnnouncementBanner").hide();
+        });
 
         $(window).on("load resize", function () {
             if (this.matchMedia("(min-width: 768px)").matches) {
